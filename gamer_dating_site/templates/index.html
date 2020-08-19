@@ -1,40 +1,346 @@
-{% include "header.html" %}
+{% load static %}
 
-<div class="container h-100">
-    <div class="row h-100 justify-content-center align-items-center">
-        <div class="card" style="width: 25rem;">
-            <img class="card-img-top" src="https://mymodernmet.com/wp/wp-content/uploads/2019/09/100k-ai-faces-6.jpg"
-                alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">František "Alcapone" Novák</h5>
-                <p class="card-text">Ahoj, jsem Franta a rád hraju hry, občas chodím ven a jinak rybařím. Taky občas
-                    mívám srandovní náladu. </p>
-                <a href="#" class="btn btn-danger">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SB Admin 2 - Dashboard</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    {% include "sidebar.html" %}
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        {% include "topbar.html" %}
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Find new match</h1>
+          </div>
+
+
+
+          <!-- Content Row -->
+          <div class="row">
+            <!-- Profile picture card -->
+            <div class="col-lg-4 mb-4">
+              <div class="card" style="width: 30rem;">
+                <img class="card-img-top" src="{% static 'img/profile.jpg' %}" alt="Card image cap">
+                <div class="card-body">
+                  <h2 class="card-title"><small class="text-muted">Jan</small> "Allether" <small
+                      class="text-muted">Bubik</small></h2>
+                  <div class="row">
+                    <div class="col-10">
+                      <a href="#" class="btn btn-danger"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                          class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
                             d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-                    </svg>
-                </a>
-                <a href="#" class="btn btn-primary">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-hand-thumbs-up" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16v-1c.563 0 .901-.272 1.066-.56a.865.865 0 0 0 .121-.416c0-.12-.035-.165-.04-.17l-.354-.354.353-.354c.202-.201.407-.511.505-.804.104-.312.043-.441-.005-.488l-.353-.354.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315L12.793 9l.353-.354c.353-.352.373-.713.267-1.02-.122-.35-.396-.593-.571-.652-.653-.217-1.447-.224-2.11-.164a8.907 8.907 0 0 0-1.094.171l-.014.003-.003.001a.5.5 0 0 1-.595-.643 8.34 8.34 0 0 0 .145-4.726c-.03-.111-.128-.215-.288-.255l-.262-.065c-.306-.077-.642.156-.667.518-.075 1.082-.239 2.15-.482 2.85-.174.502-.603 1.268-1.238 1.977-.637.712-1.519 1.41-2.614 1.708-.394.108-.62.396-.62.65v4.002c0 .26.22.515.553.55 1.293.137 1.936.53 2.491.868l.04.025c.27.164.495.296.776.393.277.095.63.163 1.14.163h3.5v1H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z" />
-                    </svg>
-                </a>
-                <a href="#" class="btn btn-secondary">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-hand-thumbs-down" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
+                        </svg></a>
+                      <a href="#" class="btn btn-info"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                          class="bi bi-people-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
+                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                        </svg></a>
+                      <a href="#" class="btn btn-outline-secondary"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                          class="bi bi-hand-thumbs-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
                             d="M6.956 14.534c.065.936.952 1.659 1.908 1.42l.261-.065a1.378 1.378 0 0 0 1.012-.965c.22-.816.533-2.512.062-4.51.136.02.285.037.443.051.713.065 1.669.071 2.516-.211.518-.173.994-.68 1.2-1.272a1.896 1.896 0 0 0-.234-1.734c.058-.118.103-.242.138-.362.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.094 2.094 0 0 0-.16-.403c.169-.387.107-.82-.003-1.149a3.162 3.162 0 0 0-.488-.9c.054-.153.076-.313.076-.465a1.86 1.86 0 0 0-.253-.912C13.1.757 12.437.28 11.5.28v1c.563 0 .901.272 1.066.56.086.15.121.3.121.416 0 .12-.035.165-.04.17l-.354.353.353.354c.202.202.407.512.505.805.104.312.043.44-.005.488l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.415-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.353.352.373.714.267 1.021-.122.35-.396.593-.571.651-.653.218-1.447.224-2.11.164a8.907 8.907 0 0 1-1.094-.17l-.014-.004H9.62a.5.5 0 0 0-.595.643 8.34 8.34 0 0 1 .145 4.725c-.03.112-.128.215-.288.255l-.262.066c-.306.076-.642-.156-.667-.519-.075-1.081-.239-2.15-.482-2.85-.174-.502-.603-1.267-1.238-1.977C5.597 8.926 4.715 8.23 3.62 7.93 3.226 7.823 3 7.534 3 7.28V3.279c0-.26.22-.515.553-.55 1.293-.138 1.936-.53 2.491-.869l.04-.024c.27-.165.495-.296.776-.393.277-.096.63-.163 1.14-.163h3.5v-1H8c-.605 0-1.07.08-1.466.217a4.823 4.823 0 0 0-.97.485l-.048.029c-.504.308-.999.61-2.068.723C2.682 1.815 2 2.434 2 3.279v4c0 .851.685 1.433 1.357 1.616.849.232 1.574.787 2.132 1.41.56.626.914 1.28 1.039 1.638.199.575.356 1.54.428 2.591z" />
-                    </svg>
-                </a>
+                        </svg></a>
+                    </div>
+                    <div class="col-2">
+                      <a href="#" class="btn btn-primary"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                          class="bi bi-gem" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
+                            d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785l-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004l.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495l5.062-.005L8 13.366 5.47 5.495zm-1.371-.999l-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l2.92-.003 2.193 6.82L1.5 5.5zm7.889 6.817l2.194-6.828 2.929-.003-5.123 6.831z" />
+                        </svg></a>
+                    </div>
+                  </div>
+
+                </div>
 
 
+
+              </div>
             </div>
-        </div>
-    </div>
-</div>
+            <div class="col-lg-8 mb-4">
+              <!-- Personal info -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Personal info </h6>
+                </div>
+                <div class="card-body">
+                  <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow"
+                      href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images
+                    that
+                    you can use completely free and without attribution!</p>
+                </div>
+              </div>
+              <!-- Gamer info -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Gamer info</h6>
+                </div>
+                <div class="card-body">
+                  <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and
+                    poor
+                    page performance. Custom CSS classes are used to create custom components and custom utility
+                    classes.</p>
+                  <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap
+                    framework, especially the utility classes.</p>
+                </div>
+              </div>
+              <!-- Gallery -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Gallery
+                  </h6>
+                </div>
+                <div class="card-body">
+                  <!--Carousel Wrapper-->
+                  <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2"
+                    data-ride="carousel">
 
-{% include "footer.html" %}
+
+                    <!--Controls-->
+
+
+                    <!--/.Controls-->
+                    <!--Slides-->
+                    <div class="row">
+                      <div class="col-xs-1 my-auto">
+                        <a class="black-text" href="#multi-item-example" data-slide="prev"><i
+                            class="fas fa-angle-left fa-3x pr-3"></i></a>
+                      </div>
+                      <div class="col">
+                        <div class="carousel-inner" role="listbox">
+
+
+                          <!--First slide-->
+                          <div class="carousel-item active">
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(38).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(19).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(42).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                          </div>
+                          <!--/.First slide-->
+
+                          <!--Second slide-->
+                          <div class="carousel-item">
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(53).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(47).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(26).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                          </div>
+                          <!--/.Second slide-->
+
+                          <!--Third slide-->
+                          <div class="carousel-item">
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(64).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(51).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(59).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                              <div class="card">
+                                <img class="img-fluid"
+                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(63).jpg"
+                                  alt="Card image cap">
+                              </div>
+                            </div>
+
+                          </div>
+                          <!--/.Third slide-->
+
+                        </div>
+                      </div>
+                      <div class="col-xs-1 my-auto">
+                        <a class="black-text" href="#multi-item-example" data-slide="next"><i
+                            class="fas fa-angle-right fa-3x pl-3"></i></a>
+                      </div>
+                    </div>
+                    <!--/.Slides-->
+
+                  </div>
+                  <!--/.Carousel Wrapper-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+  <!-- Page level plugins -->
+  <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
+  <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
+
+</body>
+
+</html>

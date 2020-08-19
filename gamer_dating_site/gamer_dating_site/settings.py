@@ -25,9 +25,6 @@ SECRET_KEY = 'z%*9*9(838gm91&3ia08ni#yy(ez@!ul-=uwo8f_9s!xnbq!73'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -116,5 +113,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    'C:/Personal/meet_gamers/gamer_dating_site/static/',
+]
